@@ -1,0 +1,25 @@
+<Extensions>
+  <Version>1.5</Version>
+  <Panel>
+    <PanelId>call_phone</PanelId>
+    <Type>Statusbar</Type>
+    <Icon>Handset</Icon>
+    <Order>1</Order>
+    <Color>#FF7033</Color>
+    <Name>PhoneCall</Name>
+  </Panel>
+  <Panel>
+    <PanelId>webexdialler</PanelId>
+    <Type>Statusbar</Type>
+    <Icon>Webex</Icon>
+    <Order>2</Order>
+    <Name>Webex</Name>
+  </Panel>
+  <Panel>
+    <PanelId>home_widget</PanelId>
+    <Type>Statusbar</Type>
+    <Icon>Home</Icon>
+    <Order>3</Order>
+    <Name>Home</Name>
+  </Panel>
+</Extensions>

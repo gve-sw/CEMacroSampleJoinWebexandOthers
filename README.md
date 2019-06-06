@@ -16,7 +16,7 @@ This sample gadget contains the following files:
 
 		README.md (this file)
 		CEMacroSampleJoinWebexandOthers.js (the macro)
-		joinwebex_inroomcontrols.xml (in-room control definition file)
+		roomcontrolconfig_conference_call_others_buttons.xml (in-room control definition file)
 		Screenshot_Touch10_idle.png (sample image)
         Screenshot_Touch10_prompt_for_meetingid.png (sample image)
         Screenshot_Touch10_prompt_for_hostpin.png (sample image)
