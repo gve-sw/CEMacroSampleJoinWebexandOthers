@@ -32,7 +32,6 @@ const DIALPAD_ID = 'webexdialpad';
 const DIALHOSTPIN_ID = 'webexhostpin';
 const PHONECALLDIALPAD_ID = 'phonedialpad';
 const VIDEOMUTE_ID = 'video_mute';
-const VIDEOUNMUTE_ID = 'video_unmute';
 
 const INROOMCONTROL_WEBEXCONTROL_PANELID = 'webexdialler';
 const INROOMCONTROL_HOMEBUTTON_PANELID = 'home_widget';
@@ -90,6 +89,21 @@ function showDialPad(text){
          }).catch((error) => { console.error(error); });
 }
 
+function toggleVideoMute(state)
+{
+    if (state=='Off')
+    {
+        xapi.command("Video Input MainVideo Mute");
+        xapi.command("UserInterface Extensions Panel Update", {PanelID: VIDEOMUTE_ID, Name: 'Camera On'});        
+    }
+    else
+    {
+        xapi.command("Video Input MainVideo Unmute");
+        xapi.command("UserInterface Extensions Panel Update", {PanelID: VIDEOMUTE_ID, Name: 'Camera Off'});
+
+    }
+}
+
 /* This is the listener for the in-room control panel button that will trigger the dial panel to appear */
 xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
     if(event.PanelId === INROOMCONTROL_WEBEXCONTROL_PANELID){
@@ -104,11 +118,9 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
         invokePhoneCallNumberInput();
     }
    if(event.PanelId == VIDEOMUTE_ID){
-        xapi.command("Video Input MainVideo Mute");
-   }
-   if(event.PanelId == VIDEOUNMUTE_ID){
-        xapi.command("Video Input MainVideo Unmute");
-   }
+        xapi.status.get('Video Input MainVideoMute').then(toggleVideoMute).catch(console.error);
+    };
+   
 
 });
 

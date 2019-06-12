@@ -23,19 +23,12 @@
     <Color>#FF3D67</Color>
     <Name>Video mute</Name>
   </Panel>
-    <Panel>
-    <PanelId>video_unmute</PanelId>
-    <Type>InCall</Type>
-    <Icon>Camera</Icon>
-    <Order>5</Order>
-    <Color>#30D557</Color>
-    <Name>Video Unmute</Name>
-  </Panel>
   <Panel>
-    <PanelId>home_widget</PanelId>
-    <Type>Statusbar</Type>
-    <Icon>Home</Icon>
-    <Order>3</Order>
-    <Name>Home</Name>
-  </Panel>
+      <PanelId>video_mute</PanelId>
+      <Type>InCall</Type>
+      <Icon>Camera</Icon>
+      <Order>4</Order>
+      <Color>#FF3D67</Color>
+      <Name>Camera Off</Name>
+    </Panel>
 </Extensions>
