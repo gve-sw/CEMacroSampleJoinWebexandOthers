@@ -31,7 +31,8 @@ const CALL_TYPES = {
 const DIALPAD_ID = 'webexdialpad';
 const DIALHOSTPIN_ID = 'webexhostpin';
 const PHONECALLDIALPAD_ID = 'phonedialpad';
-
+const VIDEOMUTE_ID = 'video_mute';
+const VIDEOUNMUTE_ID = 'video_unmute';
 
 const INROOMCONTROL_WEBEXCONTROL_PANELID = 'webexdialler';
 const INROOMCONTROL_HOMEBUTTON_PANELID = 'home_widget';
@@ -102,6 +103,13 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
    if(event.PanelId === INROOMCONTROL_CALLPHONENUMBER_PANELID){
         invokePhoneCallNumberInput();
     }
+   if(event.PanelId == VIDEOMUTE_ID){
+        xapi.command("Video Input MainVideo Mute");
+   }
+   if(event.PanelId == VIDEOUNMUTE_ID){
+        xapi.command("Video Input MainVideo Unmute");
+   }
+
 });
 
 
