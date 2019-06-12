@@ -1,5 +1,5 @@
 # Cisco CE Video Endpoints Sample Macro - Join Webex, Dial Phone number and others
-This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that adds a dedicated join webex button to the Touch 10. It also adds a "Call Phone" button.
+This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that adds a dedicated join webex button to the Touch 10. It also adds a "Call Phone" button and a button to toggle sending or not sending video from the main camera (Camera Off/Video Mute)
 
 ---
 Snapshot of Touch 10 Home Screen Panel with Join Webex button:
